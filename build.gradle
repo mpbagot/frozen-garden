@@ -1,0 +1,10 @@
+dependencies {
+
+}
+jar {
+    version = '0.01'
+    baseName = 'frozen-garden'
+}
+repositories {
+    mavenCentral()
+}
