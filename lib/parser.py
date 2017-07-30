@@ -32,7 +32,6 @@ class LanguageParser:
         '''
         Store the final data in a file in the output folder
         '''
-        print(self.outputText)
         f = open('output/'+self.fileName, 'w')
         f.write(self.outputText)
         f.close()

@@ -40,6 +40,7 @@ if files == []:
 langParser = LanguageParser(options)
 xmlConverter = XMLConverter(options)
 for f in files:
+    print('Converting File: {}'.format(f))
     langParser.setFile(f)
     langParser.evaluate()
     if options.get('output_type', 'INTERMEDIATE_XML') != 'INTERMEDIATE_XML':
@@ -51,5 +52,7 @@ for f in files:
     # Save the output and clean up for the next file
     langParser.saveOutput()
     langParser.cleanUp()
+    # Print a helpful message
+    print('File {} Converted to {}'.format(f, options.get('output_type', 'INTERMEDIATE_XML').lower()))
 
 print('All Files Converted.')
