@@ -59,7 +59,7 @@ class PseudoConverter:
             elif tag.name == 'else':
                 return 'ELSE'
             elif tag.name == 'subcall':
-                return ''
+                return tag.attributes['target']+tag.attributes['args']
         else:
             if tag.name == 'routine':
                 return 'END {}'.format(tag.attributes['name'])
