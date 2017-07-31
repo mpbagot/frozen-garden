@@ -20,6 +20,8 @@ class PseudoConverter:
         '''
         text = []
         for tag in tree:
+            if tag.name == 'br/':
+                text.append('')
             code = self.getPseudoCode(tag)
             if code:
                 text.append(pad+code)
@@ -29,6 +31,8 @@ class PseudoConverter:
             code = self.getPseudoCode(tag, False)
             if code:
                 text.append(pad+code)
+        # print([tag.name for tag in tree])
+        # print(text)
         return text
 
     def getPseudoCode(self, tag, isOpening=True):

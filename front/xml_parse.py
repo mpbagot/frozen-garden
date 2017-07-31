@@ -66,7 +66,7 @@ class TagNode:
         self.children = []
 
     def __str__(self):
-        return 'Tag(type={}, inner_text="{}", attributes="{}")'.format(self.tag_type, self.inner_text, self.attributes)
+        return 'Tag(type={}, inner_text="{}", attributes="{}")'.format(self.name, self.inner_text, self.attributes)
 
     def evaluate(self):
         '''
